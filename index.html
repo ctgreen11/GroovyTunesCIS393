@@ -6,6 +6,121 @@
     <title>Home</title>
 
     <link href="public/styles.css" rel="stylesheet" type="text/css">
+.music_category{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    margin-left: 54px;
+    margin-right: 100px;
+    text-align: center;
+   
+  }
+
+  h2{
+    text-align:center; 
+    background-color:black; 
+    color:white;
+  }
+  
+  h1{ 
+    text-align: center;
+    font-family: Impact;
+    background-color: #c8045e;
+    color: #ffffff;
+    font-size: 30pt;
+  }
+  
+  .title h1{ 
+    text-align: center;
+    background-image: linear-gradient(#ddd,black,#c8045e);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Impact;
+    font-size: 55pt;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+  
+  body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .topnav {
+      overflow: hidden;
+      background-color: #e9e9e9;
+      font-family: impact;
+    }
+    
+    .topnav a {
+      float: left;
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+    }
+    
+    .topnav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+    
+    .topnav a.active {
+      background-color: #c8045e;
+      color: white;
+    }
+    
+    .topnav .search-container {
+      float: right;
+    }
+    
+    .topnav input[type=text] {
+      padding: 6px;
+      margin-top: 8px;
+      font-size: 17px;
+      border: none;
+    }
+    
+    .topnav .search-container button {
+      float: right;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background: #399a56;
+      color: #ffffff;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .topnav .search-container button:hover {
+      background: #ccc;
+    }
+    
+    @media screen and (max-width: 600px) {
+      .topnav .search-container {
+        float: none;
+      }
+      .topnav a, .topnav input[type=text], .topnav .search-container button {
+        float: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+        margin: 0;
+        padding: 14px;
+      }
+      .topnav input[type=text] {
+        border: 1px solid #ccc;  
+      }
+    }
 </head>
 <body>
         <div class="topnav">
@@ -20,11 +135,11 @@
     <img src="Magenta_Records.jpeg" alt="Record Landing Page Img" width="900" height="500" class="center">
     </p>
     <h2>WHAT WOULD YOU LIKE TO DO?</h2>
-    <a href="http://localhost:8080/displayUsers"><img class="music_category" alt="Add Record" src="AddRecord.png"></a>
-    <a href="http://localhost:8080/Musicdelete"><img class="music_category" alt="Delete Record" src="DeleteRecord-1.png"></a>
-    <a href="http://localhost:8080/search"><img class="music_category" alt="Search Record" src="SearchRecord.png"></a>
-    <a href="http://localhost:8080/displayAllMusic"><img class="music_category" alt="See All Music" src="DisplayAllRecord.png"></a>
-    <a href="http://localhost:8080/update"><img class="music_category" alt="Update Record" src="UpdateRecord.png"></a>
+    <a href="http://localhost:8080/displayUsers"><img class="music_category" alt="Add Record" src="public/AddRecord.png"></a>
+    <a href="http://localhost:8080/Musicdelete"><img class="music_category" alt="Delete Record" src="public/DeleteRecord-1.png"></a>
+    <a href="http://localhost:8080/search"><img class="music_category" alt="Search Record" src="public/SearchRecord.png"></a>
+    <a href="http://localhost:8080/displayAllMusic"><img class="music_category" alt="See All Music" src="public/DisplayAllRecord.png"></a>
+    <a href="http://localhost:8080/update"><img class="music_category" alt="Update Record" src="public/UpdateRecord.png"></a>
 
 </body>
 </html>
