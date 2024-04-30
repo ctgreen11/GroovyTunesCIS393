@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h2{
+        text-align:center; 
+        background-color:black; 
+        color:white;
+      }
+      
+      h1{ 
+        text-align: center;
+        font-family: Impact;
+        background-color: #c8045e;
+        color: #ffffff;
+        font-size: 30pt;
+      }
+      
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      
+      body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #e9e9e9;
+          font-family: impact;
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color: #c8045e;
+          color: white;
+        }
+        
+        .topnav .search-container {
+          float: right;
+        }
+        
+        .topnav input[type=text] {
+          padding: 6px;
+          margin-top: 8px;
+          font-size: 17px;
+          border: none;
+        }
+        
+        </style>
+</head>
+        <body>
+            <div class="topnav">
+              <a href="http://127.0.0.1:5502/public/index.html">HOME</a>
+              <a href="http://localhost:8080/dbuser">REGISTER</a>
+              <a class="active" href="http://127.0.0.1:5502/public/Navigate.html">NAVIGATE</a>
+              </div>
+        
+        <h1>ADD A SONG</h1>
+        <form method ="POST" action="/register_music">
+            <div class="container">
+                <label for="std_userid"><b>User ID</b></label>
+                <input type="text" placeholder="Enter User ID" name="std_userid" id="userid" required>
+                <br>
+                <label for="music_title"><b>Title</b></label>
+                <input type="text" placeholder="Enter Title" name="std_title" id="musictitle" required>
+                <br>
+                <label for="music_artist"><b>Artist</b></label>
+                <input type="text" placeholder="Enter Artist" name="std_artist" id="name" required>
+                <br>
+                <label for="music_album"><b>Album</b></label>
+                <input type="text" placeholder="Enter Album" name="std_album" id="album" required>
+                <br>
+                <label for="music_genre"><b>Genre</b></label>
+                <input type="text" placeholder="Enter Genre" name="std_genre" id="genre" required>
+                <br>
+                <label for="music_releaseyear"><b>Release Year</b></label>
+                <input type="number" placeholder="Enter Release Year" name="std_releaseyear" id="year" required>
+                <button type="submit" class="registerbtn">Submit</button>
+              </div>
+            </form>
+
+            <h1>USERS</h1>
+            <table style="border: 1px solid black">
+                <tr style="text-align:left; background-color:#c8045e; color:#ffffff; border-bottom: 1px solid black">
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Email</th>
+                </tr>
+                <% data.forEach(function(User){ %>
+                <tr style="text-align:left; border-bottom: 1px solid black; background-color:#e9e9e9">
+                <td><%=User.user_id %></td>
+                <td><%=User.user_username %></td>
+                <td><%=User.user_email%></td>
+                <% }) %>
+                </tr>
+                </table>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    h2{
+        text-align:center; 
+        background-color:black; 
+        color:white;
+      }
+      
+      h1{ 
+        text-align: center;
+        font-family: Impact;
+        background-color: #c8045e;
+        color: #ffffff;
+        font-size: 30pt;
+      }
+      
+      .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      
+      body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .topnav {
+          overflow: hidden;
+          background-color: #e9e9e9;
+          font-family: impact;
+        }
+        
+        .topnav a {
+          float: left;
+          display: block;
+          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+          font-size: 17px;
+        }
+        
+        .topnav a:hover {
+          background-color: #ddd;
+          color: black;
+        }
+        
+        .topnav a.active {
+          background-color: #c8045e;
+          color: white;
+        }
+        
+        .topnav .search-container {
+          float: right;
+        }
+        
+        .topnav input[type=text] {
+          padding: 6px;
+          margin-top: 8px;
+          font-size: 17px;
+          border: none;
+        }
+        
+        </style>
+</head>
+
+<div class="topnav">
+    <a href="http://127.0.0.1:5502/public/index.html">HOME</a>
+    <a href="http://localhost:8080/dbuser">REGISTER</a>
+    <a class="active" href="http://127.0.0.1:5502/public/Navigate.html">NAVIGATE</a>
+    </div>
+<body>
+    <h1>SEARCH FOR A SONG</h1>
+<form method="POST" action="/search">
+Song Title: <input type="text" name="std_music_title" placeholder="Enter Title">
+<button>Search</button>
+
+</form>
+</body>
+</html>
